@@ -9,6 +9,55 @@ const OUTPUT_DIR = path.resolve(__dirname, "output");
 const outputPath = path.join(OUTPUT_DIR, "team.html");
 
 const render = require("./lib/htmlRenderer");
+const Choices = require("inquirer/lib/objects/choices");
+
+const question = answers();
+const answersJSON = JSON.stringify(answers, null, 2);
+//-------------------------------------------------------
+
+
+function answers() {
+    return [{
+
+            type: "input",
+            message: "team members name",
+            name: "name"
+        },
+        {
+
+            type: "input",
+            message: "What is their ID",
+            name: "id"
+
+        },
+        {
+            type: "input",
+            message: "Their email address",
+            name: "email"
+        },
+        {
+            type: "input",
+            message: "Their GitHub username",
+            name: "github"
+        },
+        {
+            type: "list",
+            message: "Member Type",
+            choices: ["Employee", "Engineer", "Intern", "manager"],
+            name: "role"
+
+        },
+        {
+            type: "input",
+            message: "If role is manager please submit an office number",
+            name: "office"
+
+        },
+
+
+    ]
+
+}
 
 
 // Write code to use inquirer to gather information about the development team members,
