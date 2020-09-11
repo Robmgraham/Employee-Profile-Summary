@@ -35,11 +35,7 @@ function answers() {
             message: "Their email address",
             name: "email"
         },
-        {
-            type: "input",
-            message: "Their GitHub username",
-            name: "github"
-        },
+
         {
             type: "list",
             message: "Member Type",
@@ -50,14 +46,23 @@ function answers() {
         {
             type: "input",
             message: "If role is manager please submit an office number",
-            name: "office"
+            name: "officeNumber"
 
         },
-
+        {
+            type: "input",
+            message: "If role is intern please submit the school they are attending",
+            name: "school"
+        },
+        {
+            type: "input",
+            message: "If role is engineer please submit their GitHub username",
+            name: "github"
+        }
 
     ]
 
-}
+};
 
 
 // Write code to use inquirer to gather information about the development team members,
